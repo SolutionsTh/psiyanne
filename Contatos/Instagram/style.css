@@ -1,0 +1,240 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background-color: black;
+    background: linear-gradient(140deg, #673826, #D9B46E);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+a{
+    text-decoration: none;
+}
+
+.conteudo{
+    display: flex;
+    height: 100vh;
+}
+.descricao{
+    margin: auto;
+}
+#descricaoContatos{
+    position: relative;
+    background-color: #ffffff72;
+    border-radius: 5px;
+}
+#descricaoContatos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    animation: clippath 3s infinite linear;   
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 0 95% );
+    }
+    25% {
+        clip-path: inset(95% 0 0 0);
+    }
+    50% {
+        clip-path: inset(0 95%  0 0);
+    }
+    75% {
+        clip-path: inset(0 0 95% 0);
+    }
+} 
+/* 
+#descricaoContatos::before, #descricaoContatos::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid #ffffff;
+    transition: all .5s;
+    animation: clippath 3s infinite linear;
+    border-radius: 10px; 
+}
+#descricaoContatos::after {
+    animation: clippath 3s infinite -1.5s linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 0 98% );
+    }
+    25% {
+        clip-path: inset(98% 0 0 0);
+    }
+    50% {
+        clip-path: inset(0 98%  0 0);
+    }
+    75% {
+        clip-path: inset(0 0 98% 0);
+    }
+}
+*/
+/* #descricaoContatos{
+    background-color: #ffffff72;
+    border-top: #ffffff solid 1px;
+    animation: descricaoContatos 2s infinite alternate;
+    border-radius: 3px;
+}
+@keyframes descricaoContatos {
+    from {
+        border: #ffffff 2px solid;
+    }
+    to {
+        border: none;
+    }
+} */
+.conteudoIcone{
+    display: flex;
+}
+.icone{
+    border-radius: 50%;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 5px #673826;
+}
+
+h1, h2{
+    text-align: center;
+    color: #ffffff;
+}
+#botaoVerificado{
+    color: #EBD46A;
+    padding-top: 15px;
+    padding-left: 10px;
+    /* margin: auto; */
+    position: absolute;
+}
+@font-face {
+    font-family: lovely;
+    src: Url("../fonte/lovely-golden/lovely\ golden\ ttf.ttf");
+}
+/* @font-face {
+    font-family: th1;
+    src: Url("fonte/boarding/Boarding\ PersonalUse.ttf");
+} */
+h1{
+    font-size: 20px;
+    font-family: lovely;
+    padding: 5px;
+    /* text-decoration: underline wavy #ffffff70; */
+}
+h2{
+    color: #ffffffc8;
+    font-weight: 200;
+    padding-bottom: 2px;
+}
+#texto1{
+    font-size: 20px;
+}
+#texto2{
+    font-size: 17px;
+}
+.CRP{    
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.conteudoLink, .conteudoContato{
+    display: grid;
+    margin: 20px;
+}
+.link{
+    margin: 5px auto;
+    padding: 15px 30px;
+    background-color: #ffffff72;
+    border-radius: 50px;
+    color: #673826;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: transform 1s;
+}
+.linkBotao{
+    margin: 5px auto;
+    padding: 15px 30px;
+    background-color: #ffffff72;
+    color: #673826;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.link:hover{
+    background-color: #ffffff;
+    font-size: 19px;
+    padding: 13px 35px;
+}
+#linkContatos{
+    background-color: #ffffff00;
+    /* color: #ffffff; */
+    color: #673826;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 2px;
+    animation: LinkMenusDados 1s infinite alternate;
+}  
+@keyframes LinkMenusDados {
+    from {
+        transform:translateX(0) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+        background-color: #ffffffc1;
+    }
+}
+
+.iconeLink{
+    margin: auto;
+    padding-right: 5px;
+    color: #673826bb;
+}
+
+.contato{
+    color: #673826;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 5px;
+}
+.descricaoContato{
+    color: #673826d6;
+}
+
+
+.botaoVoltar{
+    background-color: #EBD46A;
+    font-size: 20px;
+    position: absolute;
+    border-radius: 0px 0px 10px 0px;
+    animation: botaoVOltar 1s infinite alternate;
+    padding: 10px;
+}  
+@keyframes botaoVOltar {
+    from {
+        color: #673826;
+    }
+    to {
+        color: #ffffff;
+    }
+}
